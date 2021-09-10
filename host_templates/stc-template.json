@@ -1,0 +1,49 @@
+{
+    "host": "STC_Template",
+    "name": "STC_Template",
+    "description": "asdasasd",
+    "proxy": {
+        "name": "ct_proxy"
+    },
+    "templates": [
+        {
+            "name": "Huawei VRP SNMP_STC"
+        }
+    ],
+    "groups": [
+        {
+            "name": "STC"
+        },
+        {
+            "name": "STC/Network"
+        },
+        {
+            "name": "STC/Network/Switches"
+        },
+        {
+            "name": "STC/Network/Switches/Huawei"
+        }
+    ],
+    "interfaces": [
+        {
+            "type": "SNMP",
+            "ip": "1.1.1.1",
+            "port": "161",
+            "details": {
+                "community": "{$SNMP_COMMUNITY_STC}"
+            },
+            "interface_ref": "if1"
+        }
+    ],
+    "tags": [
+        {
+            "tag": "Customer",
+            "value": "STC"
+        },
+        {
+            "tag": "Vendor",
+            "value": "Huawei"
+        }
+    ],
+    "inventory_mode": "AUTOMATIC"
+}
